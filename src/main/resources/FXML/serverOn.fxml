@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.Circle?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="ServerController"
+            fx:id="onBP"
+            styleClass="border-pane"
+            prefHeight="700" prefWidth="1000">
+
+    <top>
+        <HBox spacing="10" alignment="CENTER_LEFT">
+            <Label fx:id="clientCount" styleClass="client-count-label"/>
+            <Circle styleClass="active-circle" radius="5"/>
+        </HBox>
+    </top>
+
+    <center>
+        <VBox alignment="CENTER">
+            <ListView fx:id="listItems" prefHeight="500"/>
+        </VBox>
+    </center>
+
+    <bottom>
+        <HBox alignment="BOTTOM_RIGHT">
+            <Button fx:id="stop" styleClass="stop-button" text="Stop Server" onAction="#stopServerMethod"/>
+        </HBox>
+    </bottom>
+
+</BorderPane>
